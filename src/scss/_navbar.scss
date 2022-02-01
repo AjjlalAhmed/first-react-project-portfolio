@@ -1,6 +1,6 @@
 .nav {
     background: #000;
-    padding: 10px 50px;
+    padding: 10px 30px;
     border-bottom: 1px solid #3333;
     .nav-ul {
         display: flex;
@@ -29,6 +29,9 @@
                 transition: .2s ease;
                 &:hover {
                     color: #ff5306;
+                }
+                i {
+                    margin-right: 10px;
                 }
             }
         }
@@ -67,7 +70,7 @@
     }
 }
 
-@media only screen and(max-width:550px) {
+@media only screen and(max-width:768px) {
     .nav {
         .nav-ul {
             .menu {
@@ -79,7 +82,7 @@
                     border: 1px solid #2222;
                     box-shadow: 5px 5px 5px #2222;
                     background: #fff;
-                    width: 120px;
+                    width: 150px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -88,7 +91,7 @@
                         border: 1px solid #3333;
                         width: 100%;
                         text-align: center;
-                        padding: 5px 10px;
+                        padding: 10px;
                         a {
                             color: #000;
                         }

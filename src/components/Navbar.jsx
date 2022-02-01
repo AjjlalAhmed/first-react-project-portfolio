@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Main function
 const Navbar = () => {
   // Variables
-  const mobileWidth = 550;
+  const mobileWidth = 768;
   const [showMenuButton, setShowMenuButton] = useState(null);
   const [showMenu, setShowMenu] = useState(null);
 
@@ -35,6 +35,14 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="about">about</Link>
             </li>
+            <li className="nav-item">
+              <a
+                href={`${process.env.PUBLIC_URL}/assets/downloads/resume.pdf`}
+                download
+              >
+                <i className="fa fa-download" aria-hidden="true"></i>resume
+              </a>
+            </li>
           </>
         )}
         {showMenuButton && (
@@ -55,6 +63,14 @@ const Navbar = () => {
                   <Link onClick={toggleMenu} to="about">
                     about
                   </Link>
+                </li>
+                <li className="nav-item">
+                  <a
+                    href={`${process.env.PUBLIC_URL}/assets/downloads/resume.pdf`}
+                    download
+                  >
+                    <i className="fa fa-download" aria-hidden="true"></i>resume
+                  </a>
                 </li>
               </ul>
             )}
