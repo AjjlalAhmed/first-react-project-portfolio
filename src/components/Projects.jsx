@@ -1,4 +1,6 @@
+// Main function
 const Projects = () => {
+  // Variables
   const projects = [
     {
       id: 1,
@@ -58,6 +60,8 @@ const Projects = () => {
       ],
     },
   ];
+  
+  // Returning jsx
   return (
     <div className="project">
       <h1 className="title">projects</h1>
@@ -92,5 +96,5 @@ const Projects = () => {
     </div>
   );
 };
-
+// Exporting function
 export default Projects;

@@ -1,4 +1,6 @@
+// Main function
 const Footer = () => {
+  // Returning jsx
   return (
     <div className="footer">
       <ul>
@@ -40,5 +42,5 @@ const Footer = () => {
     </div>
   );
 };
-
+// Exporting function
 export default Footer;

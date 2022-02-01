@@ -1,8 +1,10 @@
+// Importing thing we need
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// Main function
 const Navbar = () => {
-  // Varaibles
+  // Variables
   const mobileWidth = 550;
   const [showMenuButton, setShowMenuButton] = useState(null);
   const [showMenu, setShowMenu] = useState(null);
@@ -18,8 +20,9 @@ const Navbar = () => {
       if (window.innerWidth < mobileWidth) setShowMenuButton(true);
       else setShowMenuButton(false);
     });
-  },[]);
+  }, []);
 
+  // Returning jsx
   return (
     <nav className="nav">
       <ul className="nav-ul">
@@ -44,10 +47,14 @@ const Navbar = () => {
             {showMenu && (
               <ul className="mob-nav">
                 <li className="nav-item">
-                  <Link onClick={toggleMenu} to="/">home</Link>
+                  <Link onClick={toggleMenu} to="/">
+                    home
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link onClick={toggleMenu} to="about">about</Link>
+                  <Link onClick={toggleMenu} to="about">
+                    about
+                  </Link>
                 </li>
               </ul>
             )}
@@ -57,5 +64,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
+// Exporting function
 export default Navbar;

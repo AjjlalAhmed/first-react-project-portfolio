@@ -1,4 +1,6 @@
+// Main function
 const About = () => {
+  // Variables
   const skills = [
     "HTML",
     "Css",
@@ -13,14 +15,18 @@ const About = () => {
     "Git",
     "Npm",
   ];
+
+  // Returning jsx
   return (
     <div className="about">
       <h1 className="title">about</h1>
+
       <div className="content">
         <div className="desc">
           My name is Ajjlal Ahmed, and I am a Full-Stack web developer
           specializing in HTML, CSS, JAVASCRIPT, NODE & VUE-based web apps.
         </div>
+
         <div className="work">
           <h2 className="title">WORK EXPERIENCE</h2>
           <p className="from">Front End Developer at Fiverr</p>
@@ -40,6 +46,7 @@ const About = () => {
             smoothly
           </p>
         </div>
+
         <div className="education">
           <h2 className="title">education</h2>
           <p className="from">Ali Ali School Karachi PK</p>
@@ -49,6 +56,7 @@ const About = () => {
           </p>
           <p className="what">Faculty of Science., Engineering</p>
         </div>
+
         <div className="certification">
           <h2 className="title">certificates</h2>
           <p className="from">Responsive Web Design</p>
@@ -66,6 +74,7 @@ const About = () => {
             https://www.udemy.com/certificate/UC-eddda058-d072-4670-9264-1d85d6b42db1/
           </p>
         </div>
+
         <div className="skills">
           <h2 className="title">Skills</h2>
           <ul>
@@ -80,5 +89,5 @@ const About = () => {
     </div>
   );
 };
-
+// Exporting function
 export default About;
