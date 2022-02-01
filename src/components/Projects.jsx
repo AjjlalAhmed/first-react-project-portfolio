@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Projects = () => {
   const projects = [
     {
