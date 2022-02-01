@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([
+  const projects = [
     {
       id: 1,
       title: "url shortner ",
@@ -59,7 +59,7 @@ const Projects = () => {
         "Node-cron",
       ],
     },
-  ]);
+  ];
   return (
     <div className="project">
       <h1 className="title">projects</h1>
@@ -80,7 +80,14 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
-            <a href={item.url} target="_blank" className="view-project__btn" rel="noreferrer">View project</a>
+            <a
+              href={item.url}
+              target="_blank"
+              className="view-project__btn"
+              rel="noreferrer"
+            >
+              View project
+            </a>
           </div>
         ))}
       </div>
