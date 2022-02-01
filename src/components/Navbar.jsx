@@ -18,7 +18,7 @@ const Navbar = () => {
       if (window.innerWidth < mobileWidth) setShowMenuButton(true);
       else setShowMenuButton(false);
     });
-  });
+  },[]);
 
   return (
     <nav className="nav">
@@ -44,14 +44,10 @@ const Navbar = () => {
             {showMenu && (
               <ul className="mob-nav">
                 <li className="nav-item">
-                  <Link onClick={toggleMenu} to="/">
-                    home
-                  </Link>
+                  <Link onClick={toggleMenu} to="/">home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link onClick={toggleMenu} to="about">
-                    about
-                  </Link>
+                  <Link onClick={toggleMenu} to="about">about</Link>
                 </li>
               </ul>
             )}
