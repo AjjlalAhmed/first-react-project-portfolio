@@ -21,15 +21,6 @@ const About = () => {
           My name is Ajjlal Ahmed, and I am a Full-Stack web developer
           specializing in HTML, CSS, JAVASCRIPT, NODE & VUE-based web apps.
         </div>
-        <div className="education">
-          <h2 className="title">education</h2>
-          <p className="from">Ali Ali School Karachi PK</p>
-          <p className="what">Matric, Computer Science</p>
-          <p className="from">
-            Allama Iqbal Government Boys Higher Secondary School
-          </p>
-          <p className="what">Faculty of Science., Engineering</p>
-        </div>
         <div className="work">
           <h2 className="title">WORK EXPERIENCE</h2>
           <p className="from">Front End Developer at Fiverr</p>
@@ -48,6 +39,15 @@ const About = () => {
             responsibility for the entire experience to make sure it goes
             smoothly
           </p>
+        </div>
+        <div className="education">
+          <h2 className="title">education</h2>
+          <p className="from">Ali Ali School Karachi PK</p>
+          <p className="what">Matric, Computer Science</p>
+          <p className="from">
+            Allama Iqbal Government Boys Higher Secondary School
+          </p>
+          <p className="what">Faculty of Science., Engineering</p>
         </div>
         <div className="certification">
           <h2 className="title">certificates</h2>
