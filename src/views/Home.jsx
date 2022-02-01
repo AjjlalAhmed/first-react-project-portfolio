@@ -1,6 +1,5 @@
 // Importing thing we need
 import Projects from "../components/Projects";
-import Footer from "../components/Footer";
 
 // Main function
 const Home = () => {
@@ -23,10 +22,6 @@ const Home = () => {
 
       <section id="projects">
         <Projects />
-      </section>
-
-      <section className="footer">
-        <Footer />
       </section>
     </div>
   );

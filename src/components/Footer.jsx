@@ -37,7 +37,20 @@ const Footer = () => {
             </a>
           </div>
         </li>
-        <li className="right-sec"></li>
+        <li className="right-sec">
+          <h1 className="footer-title">contact me</h1>
+          <form className="form">
+            <div className="form-control">
+              <input type="text" placeholder="Enter your email" />
+            </div>
+            <div className="form-control">
+              <textarea placeholder="Message..."></textarea>
+            </div>
+            <div className="form-control">
+              <button className="send-email">send</button>
+            </div>
+          </form>
+        </li>
       </ul>
     </div>
   );

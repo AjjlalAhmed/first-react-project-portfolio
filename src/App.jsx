@@ -1,6 +1,7 @@
 // Importing thing we need
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./views/Home";
 import About from "./views/About";
 import { Helmet } from "react-helmet";
@@ -33,6 +34,8 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
         </Routes>
       </div>
+
+      <Footer />
     </BrowserRouter>
   );
 }
