@@ -18,7 +18,7 @@ function App() {
         />
         <meta
           name="description"
-          content="JavaScript wizard, chaotic good"
+          content="Ajjlal Ahmed FullStack Developer"
         ></meta>
         <meta
           name="keyword"
