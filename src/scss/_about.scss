@@ -30,6 +30,7 @@
         .what {
             font-size: unquote("clamp(0.9rem, .5vw + .8rem, 8rem)");
             padding-bottom: 20px;
+            word-wrap: break-word;
         }
     }
     .skills {

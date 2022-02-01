@@ -29,12 +29,13 @@
             .card-title {
                 text-transform: capitalize;
                 font-size: unquote("clamp(1.5rem, 2vw + 1rem, 5rem)");
-                padding: 10px;
+                padding: 10px 0px;
                 margin-top: 30px;
             }
             .desc {
                 font-size: unquote("clamp(1rem, 1vw + .4rem, 5rem)");
                 color: rgba(61, 61, 61, 0.966);
+                padding: 10px 0px;
             }
             .stacks {
                 display: flex;

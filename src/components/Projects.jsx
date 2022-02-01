@@ -64,13 +64,13 @@ const Projects = () => {
       <div className="showcase">
         {projects.map((item) => (
           <div className="card" key={item.id}>
+            <h1 className="card-title">{item.title}</h1>
+            <p className="desc">{item.desc}</p>
             <img
               className="poster"
               src={`${process.env.PUBLIC_URL}/assets/images${item.imgSrc}`}
               alt=""
             />
-            <h1 className="card-title">{item.title}</h1>
-            <p className="desc">{item.desc}</p>
             <ul className="stacks">
               {item.stacks.map((innerItem, index) => (
                 <li className="stack" key={index}>
