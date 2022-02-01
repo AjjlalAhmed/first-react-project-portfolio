@@ -1,0 +1,40 @@
+.footer {
+    background: #000;
+    padding: 30px 20px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        .left-sec {
+            .footer-title {
+                color: #fff;
+                font-size: unquote("clamp(0.9rem, 1vw + 1rem, 8rem)");
+                text-transform: capitalize;
+                font-size: 700;
+            }
+            .email {
+                padding: 20px 0px;
+                font-size: unquote("clamp(0.9rem, .5vw + 1rem, 8rem)");
+                color: #fff;
+                i {
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+            .links {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 40px;
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    i {
+                        font-size: unquote("clamp(0.9rem, 1vw + 1rem, 8rem)");
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

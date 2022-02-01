@@ -1,0 +1,100 @@
+.nav {
+    background: #000;
+    padding: 10px 50px;
+    border-bottom: 1px solid #3333;
+    .nav-ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+        .logo {
+            font-size: unquote("clamp(2rem, 1vw + 1rem, 8rem)");
+            text-transform: capitalize;
+            color: #fff;
+            flex-grow: 2;
+            font-weight: 700;
+            font-family: 'Comforter', cursive;
+        }
+        .nav-item {
+            margin: 0px 40px;
+            a {
+                color: #fff;
+                text-transform: capitalize;
+                font-size: unquote("clamp(1rem, .5vw + 1rem, 5rem)");
+                text-decoration: none;
+                font-weight: 700;
+                transition: .2s ease;
+                &:hover {
+                    color: #ff5306;
+                }
+            }
+        }
+        .menu {
+            position: relative;
+            .bar {
+                span {
+                    display: block;
+                    width: 30px;
+                    height: 4px;
+                    margin: 5px;
+                    background: #ff5306;
+                }
+            }
+            .mob-nav {
+                position: absolute;
+                top: 30px;
+                left: -100px;
+                list-style: none;
+                border: 1px solid #2222;
+                box-shadow: 5px 5px 5px #2222;
+                background: #fff;
+                width: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .nav-item {
+                    border: 1px solid #3333;
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:550px) {
+    .nav {
+        .nav-ul {
+            .menu {
+                .mob-nav {
+                    position: absolute;
+                    top: 30px;
+                    left: -100px;
+                    list-style: none;
+                    border: 1px solid #2222;
+                    box-shadow: 5px 5px 5px #2222;
+                    background: #fff;
+                    width: 120px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .nav-item {
+                        border: 1px solid #3333;
+                        width: 100%;
+                        text-align: center;
+                        padding: 5px 10px;
+                        a {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

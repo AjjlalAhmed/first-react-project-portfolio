@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Comforter&family=Quicksand:wght@400;700&display=swap');
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth
+}
+
+@import "./navbar";
+@import "./project";
+@import "./footer";
+@import "./about";
+@import "./home";
