@@ -1,13 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
+
 // Importing thing we need
 import { Link, useLocation } from "react-router-dom";
 import queryString from "query-string";
+import RoutesWatcher from "../helpers/routesWatcher";
 
 // Main function
 const Message = () => {
   // Variables
   const { search } = useLocation();
   const { imgName, message } = queryString.parse(search);
+
+  RoutesWatcher();
 
   //   Returning jsx
   return (

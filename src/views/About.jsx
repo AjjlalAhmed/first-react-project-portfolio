@@ -1,3 +1,5 @@
+import RoutesWatcher from "../helpers/routesWatcher";
+
 // Main function
 const About = () => {
   // Variables
@@ -15,6 +17,8 @@ const About = () => {
     "Git",
     "Npm",
   ];
+
+  RoutesWatcher();
 
   // Returning jsx
   return (
@@ -85,7 +89,6 @@ const About = () => {
             ))}
           </ul>
         </div>
-        
       </div>
     </div>
   );

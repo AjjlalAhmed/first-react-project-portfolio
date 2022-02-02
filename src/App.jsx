@@ -13,6 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <Helmet>
         <meta
           property="og:title"

@@ -1,8 +1,10 @@
 // Importing thing we need
 import Projects from "../components/Projects";
+import RoutesWatcher from "../helpers/routesWatcher";
 
 // Main function
 const Home = () => {
+  RoutesWatcher()
   // Returning jsx
   return (
     <div className="home">

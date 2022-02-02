@@ -1,3 +1,4 @@
+// Importing thing we need
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,36 +10,52 @@ const Footer = () => {
   const navigate = useNavigate();
 
   // Functions
-  const submit = (e) => {
+  const submit = async (e) => {
+    // Preventing browser to reload
     e.preventDefault();
+    // Checking if inputs is empty
     if (email === "") return;
     if (message === "") return;
 
-    // https://github.com/github/fetch
-    fetch("https://formsubmit.co/ajax/ajjlalahmed48@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        message: message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setMessage("");
-        setEmail("");
-        window.scrollTo(0, 0)
+    try {
+      // Creating request header
+      const header = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          message: message,
+        }),
+      };
+      // Creating request
+      const response = await fetch(
+        "https://formsubmit.co/ajax/ajjlalahmed48@gmail.com",
+        header
+      );
+      // Parsing data
+      const data = await response.json();
+      // Removing input values
+      setMessage("");
+      setEmail("");
+
+      // Checking status
+      if (data.success === "true") {
+        // Changing route
         navigate(`/message?imgName=message-sent.svg&message=${data.message}`);
-      })
-      .catch((error) => {
-        setMessage("");
-        setEmail("");
-        window.scrollTo(0, 0)
-        navigate(`/message?imgName=message-fail.svg&message=${error.message}`);
-      });
+      } else {
+        // Changing route
+        navigate(`/message?imgName=message-fail.svg&message=${data.message}`);
+      }
+    } catch (error) {
+      // Removing input values
+      setMessage("");
+      setEmail("");
+      // Changing route
+      navigate(`/message?imgName=message-fail.svg&message=${error.message}`);
+    }
   };
 
   // Returning jsx
@@ -87,6 +104,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Enter your email"
                 value={email}
+                autoComplete="on"
               />
             </div>
             <div className="form-control">
@@ -97,7 +115,9 @@ const Footer = () => {
               ></textarea>
             </div>
             <div className="form-control">
-              <button className="send-email">send</button>
+              <button className="send-email">
+                <i className="fa fa-paper-plane" aria-hidden="true"></i>send
+              </button>
             </div>
           </form>
         </li>
