@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
+
       <Helmet>
         <meta
           property="og:title"
@@ -25,7 +25,7 @@ function App() {
         ></meta>
         <meta
           name="keyword"
-          content="portfolio, javascript, developer, fullstack"
+          content="portfolio, javascript, developer, fullstack , ajjlal, ahmed, ajjlalahmed"
         ></meta>
         <meta property="og:type" content="website" />
       </Helmet>
