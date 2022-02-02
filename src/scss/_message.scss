@@ -1,0 +1,30 @@
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0px;
+    padding: 10px;
+    img {
+        width: 30%;
+        min-width: 250px;
+    }
+    .message-text {
+        text-transform: capitalize;
+        font-size: unquote("clamp(0.9rem, 1vw + 1rem, 8rem)");
+        padding: 10px;
+    }
+    a {
+        text-transform: capitalize;
+        font-size: unquote("clamp(0.9rem, 1vw + 1rem, 8rem)");
+        display: inline-block;
+        text-align: center;
+        padding: 5px 20px;
+        border-radius: 3px;
+        background: #ff5306;
+        color: #fff;
+        text-transform: capitalize;
+        text-decoration: none;
+        margin: 20px;
+    }
+}

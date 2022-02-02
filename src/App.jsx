@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
 import About from "./views/About";
+import Message from "./views/Message";
 import { Helmet } from "react-helmet";
 
 // Main function
@@ -32,6 +33,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/message" element={<Message />}></Route>
         </Routes>
       </div>
 

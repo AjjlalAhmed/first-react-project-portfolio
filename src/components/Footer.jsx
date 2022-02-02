@@ -1,5 +1,46 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 // Main function
 const Footer = () => {
+  // Variables
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+
+  // Functions
+  const submit = (e) => {
+    e.preventDefault();
+    if (email === "") return;
+    if (message === "") return;
+
+    // https://github.com/github/fetch
+    fetch("https://formsubmit.co/ajax/ajjlalahmed48@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        message: message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setMessage("");
+        setEmail("");
+        window.scrollTo(0, 0)
+        navigate(`/message?imgName=message-sent.svg&message=${data.message}`);
+      })
+      .catch((error) => {
+        setMessage("");
+        setEmail("");
+        window.scrollTo(0, 0)
+        navigate(`/message?imgName=message-fail.svg&message=${error.message}`);
+      });
+  };
+
   // Returning jsx
   return (
     <div className="footer">
@@ -39,12 +80,19 @@ const Footer = () => {
         </li>
         <li className="right-sec">
           <h1 className="footer-title">contact me</h1>
-          <form className="form">
+          <form onSubmit={submit} className="form">
             <div className="form-control">
-              <input type="text" placeholder="Enter your email" />
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Enter your email"
+              />
             </div>
             <div className="form-control">
-              <textarea placeholder="Message..."></textarea>
+              <textarea
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Message..."
+              ></textarea>
             </div>
             <div className="form-control">
               <button className="send-email">send</button>
