@@ -86,12 +86,14 @@ const Footer = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="Enter your email"
+                value={email}
               />
             </div>
             <div className="form-control">
               <textarea
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Message..."
+                value={message}
               ></textarea>
             </div>
             <div className="form-control">
